@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.darkkillen.navplayground.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action android:id="@+id/action_home_to_feed"
+            app:destination="@+id/feedFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.darkkillen.navplayground.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action android:id="@+id/action_feed_to_setting"
+            app:destination="@+id/settingFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.darkkillen.navplayground.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action android:id="@+id/action_setting_to_home"
+            app:destination="@+id/homeFragment"/>
+    </fragment>
+
+</navigation>
